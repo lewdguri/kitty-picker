@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./resources/css/style.css">
-    <title>Kitty Picker</title>
-</head>
-<body>
-    <script src="./resources/js/index.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./resources/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+        <title>Kitty Picker</title>
+    </head>
+    <body onload="update()">
+        <header class="header">
+            <img id="logo" alt="logo" src="./resources/img/kitty.png">
+            <h1>Kitty Picker</h1>
+            <h2><a class="btn" rel="noreferrer noopener" target="_blank" href="https://github.com/lewdguri/kitty-picker">Github</a></h2>
+        </header>
+        
+        <main id="multiple-backgrounds">
+            <div class="main-card">
+                <div class="buttons">
+                    <button onclick="dislike();notif('dislike');" class="dislike-btn btn"><box-icon class="dislike-icon" name='dislike'></box-icon></button>
+                    
+                    <button onclick="skip();notif('skip');" class="skip-btn btn"><box-icon class="skip-icon" name='chevrons-right'></box-icon></button>
+                    
+                    <button onclick="like();notif('like');" class="like-btn btn"><box-icon class="like-icon" name='like'></box-icon></button>
+                </div>
+                <img id="kitti-photo" src="" alt="cute kittie">
+            </div>
+        </main>
+            <div class="snackbar"><p class="snackbar-js-p"></p></div>
+            
+            
+            <script src="./resources/js/index.js"></script>
+            <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    </body>
 </html>

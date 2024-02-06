@@ -1,0 +1,120 @@
+:root {
+    --text: #110813;
+    --background: #faf5fb;
+    --primary: #ae4fc8;
+    --secondary: #dfa7ee;
+    --accent: #c260dd;
+}
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width: 601px) {
+    .header {
+        flex-direction: row;
+    }
+}
+.header{
+    background-color: var(--primary);
+    color: white;
+    
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.header img {
+    width: 100px;
+    height: 100px;
+}
+
+.main-card{
+    margin-top: 5vw;
+
+    min-width: 300px;
+    min-height: 200px;
+    width: fit-content;
+    height: fit-content;
+
+    background-color: var(--accent);
+    outline: 2.2px dashed var(--background);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#kitti-photo {
+    max-height: 400px;
+}
+
+.buttons {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.buttons * {
+    border-radius: 35px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    cursor: pointer;
+    transition: .2s;
+    max-width: 200px;
+}
+
+.dislike-btn{
+    background-color: rgb(234, 61, 61);
+}
+
+.like-btn{
+    background-color: rgb(18, 176, 18);
+}
+
+.btn:hover {
+    filter:brightness(115%);
+}
+
+.snackbar-js{
+    position: absolute;
+    background-color: black;
+    right: 1%;
+    top: 90%;
+    width: 250px;
+    text-align: center;
+    color: white;
+    opacity: 0%;
+    transition: opacity 0.3s;
+}
+
+.show {
+    opacity: 100%;
+}
